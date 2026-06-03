@@ -115,6 +115,28 @@
       .photo-strip { height: 140px; }
     }
 
+    /* PLATFORM ROW */
+    .platform-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
     /* LEGEND */
     .legend {
       background: var(--white);
@@ -368,6 +390,18 @@
       line-height: 1.5;
     }
 
+    .post-format {
+      display: inline-block;
+      margin-top: 7px;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--mid);
+      background: var(--soft);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+
     /* STATUS SECTION */
     .status-section {
       display: grid;
@@ -465,6 +499,16 @@
         <span class="hero-pill">Organic Only</span>
         <span class="hero-pill">School Starts Aug 12</span>
       </div>
+      <div class="platform-row">
+        <span class="platform-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+          Instagram Reels + Feed
+        </span>
+        <span class="platform-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.16 8.16 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z" fill="white"/></svg>
+          TikTok (same content)
+        </span>
+      </div>
     </div>
   </div>
 
@@ -545,14 +589,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">Stain carousel — how to save a school uniform from anything</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">"20 years. One LA family." brand intro post</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Girl Safari dress video ad</div>
+              <span class="post-format">Video (Reel)</span>
             </div>
           </div>
         </div>
@@ -563,14 +610,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">How many uniforms does your kid actually need?</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">Real Amazon review quote (word for word)</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Hallway video ad</div>
+              <span class="post-format">Video (Reel)</span>
             </div>
           </div>
         </div>
@@ -581,14 +631,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">How to keep white polos white all year long</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">Behind the scenes — LA family, LA schools, 20 years</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Boy virtual try-on ad</div>
+              <span class="post-format">Video (Reel)</span>
             </div>
           </div>
         </div>
@@ -599,14 +652,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">The one thing quietly ruining your white polos (most moms don't know)</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">"Why we started" — the family story</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Girls playground video ad</div>
+              <span class="post-format">Video (Reel)</span>
             </div>
           </div>
         </div>
@@ -632,14 +688,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">Back to school costs $628 a kid — here is how to cut the uniform part</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">Review quote from a sensory-kid parent</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">GU07 skirt locker video ad</div>
+              <span class="post-format">Video (Reel)</span>
             </div>
           </div>
         </div>
@@ -650,14 +709,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">How to size school uniforms — measure first, buy up one size</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">"Still fits in November" durability story</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Polo color lineup carousel (10 colors)</div>
+              <span class="post-format">Carousel</span>
             </div>
           </div>
         </div>
@@ -668,14 +730,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">Uniforms for rough and active kids — what to actually look for</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">Family photo or real kid content from you all</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Girl Safari dress ad</div>
+              <span class="post-format">Video (Reel)</span>
             </div>
           </div>
         </div>
@@ -686,14 +751,17 @@
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">Uniforms for sensory-sensitive kids — what makes the difference</div>
+              <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">14,000+ reviews milestone post</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Full product range carousel</div>
+              <span class="post-format">Carousel</span>
             </div>
           </div>
         </div>
@@ -719,14 +787,17 @@
             <div class="post-cell urgency">
               <div class="post-type"><span class="type-dot"></span>Urgency</div>
               <div class="post-text">"School starts in 2 weeks" countdown post</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">Best review of the whole summer</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
-              <div class="post-text">"Shop before they sell out" product post</div>
+              <div class="post-text">"Shop before they sell out" product post + link in bio</div>
+              <span class="post-format">Single Image + Paid Boost</span>
             </div>
           </div>
         </div>
@@ -737,14 +808,17 @@
             <div class="post-cell urgency">
               <div class="post-type"><span class="type-dot"></span>Urgency</div>
               <div class="post-text">"Last call" back to school post</div>
+              <span class="post-format">Video (Reel) + Paid Boost</span>
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
               <div class="post-text">Real first day of school photo (from your family if possible)</div>
+              <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Link in bio push direct to unikusa.com</div>
+              <span class="post-format">Single Image + Paid Boost</span>
             </div>
           </div>
         </div>
