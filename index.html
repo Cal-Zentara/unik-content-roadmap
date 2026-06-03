@@ -167,6 +167,69 @@
 
     .intro-card strong { color: var(--ink); }
 
+    /* STRATEGY ROW */
+    .strategy-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-bottom: 40px;
+    }
+
+    .strategy-card {
+      flex: 1;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .strategy-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .s1 .strategy-num { background: var(--blue); }
+    .s2 .strategy-num { background: var(--orange); }
+    .s3 .strategy-num { background: var(--red); }
+
+    .strategy-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .strategy-desc {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    .strategy-arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 20px;
+      color: var(--border);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .strategy-row { flex-direction: column; }
+      .strategy-arrow { transform: rotate(90deg); align-self: center; padding: 4px 0; }
+    }
+
     /* PHASE SECTION */
     .phase-section { margin-bottom: 44px; }
 
@@ -435,6 +498,33 @@
     <!-- INTRO -->
     <div class="intro-card">
       <p>Spend June and July <strong>earning trust</strong> with helpful content. Then convert in August when moms are actively shopping. All <strong>6 video ads are already done.</strong> This plan covers the organic posts that build the audience around them. CTA on every post goes to <strong>unikusa.com.</strong></p>
+    </div>
+
+    <!-- STRATEGY -->
+    <div class="strategy-row">
+      <div class="strategy-card s1">
+        <div class="strategy-num">1</div>
+        <div class="strategy-info">
+          <div class="strategy-title">Build the presence</div>
+          <div class="strategy-desc">June and July. Post helpful content and video ads organically. No money spent. Moms discover the brand, save posts, and follow the page.</div>
+        </div>
+      </div>
+      <div class="strategy-arrow">→</div>
+      <div class="strategy-card s2">
+        <div class="strategy-num">2</div>
+        <div class="strategy-info">
+          <div class="strategy-title">Build the trust</div>
+          <div class="strategy-desc">Still July. Reviews, family story, product education. By the time a mom sees the product post, she already knows who unik is.</div>
+        </div>
+      </div>
+      <div class="strategy-arrow">→</div>
+      <div class="strategy-card s3">
+        <div class="strategy-num">3</div>
+        <div class="strategy-info">
+          <div class="strategy-title">Spend on ads</div>
+          <div class="strategy-desc">August only. Take the post that performed best and put $5 to $10 a day behind it on Instagram. Audience is warm, school starts in days. That is when ads convert.</div>
+        </div>
+      </div>
     </div>
 
     <!-- PHASE 1 -->
