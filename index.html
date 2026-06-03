@@ -85,6 +85,21 @@
       border: 1px solid rgba(255,255,255,0.3);
     }
 
+    /* TOP BAR */
+    .topbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .topbar-logo {
+      height: 40px;
+      width: auto;
+    }
+
     /* PHOTO STRIP */
     .photo-strip {
       display: flex;
@@ -488,10 +503,14 @@
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <img src="logo.avif" alt="unik" class="topbar-logo" />
+  </div>
+
   <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-logo">unik</div>
       <div class="hero-title">Back to School Content Plan — Summer 2026</div>
       <div class="hero-pills">
         <span class="hero-pill">10 Weeks</span>
