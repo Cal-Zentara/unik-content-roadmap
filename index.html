@@ -3,497 +3,691 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>unik — Content Roadmap, Back to School 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>unik — Back to School Content Plan 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --blue: #29ABE2;
-      --blue-light: #e8f6fd;
+      --blue-light: #e0f4fc;
       --blue-dark: #1a8abf;
-      --ink: #1a1a1a;
-      --mid: #5a5a6a;
-      --soft: #f5f6f8;
-      --border: #e4e6ec;
+      --green: #27ae60;
+      --green-light: #e8f8ef;
+      --orange: #f39c12;
+      --orange-light: #fef5e0;
+      --purple: #8e44ad;
+      --purple-light: #f3eaff;
+      --red: #e74c3c;
+      --red-light: #fdecea;
+      --ink: #1a1a2e;
+      --mid: #6b7280;
+      --bg: #f8f9fb;
       --white: #ffffff;
+      --border: #e5e7eb;
     }
 
     body {
       font-family: 'Outfit', sans-serif;
-      background: var(--soft);
+      background: var(--bg);
       color: var(--ink);
-      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* HEADER */
-    .header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 32px 24px 28px;
+    /* HERO */
+    .hero {
+      background: var(--blue);
+      padding: 48px 24px 40px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--blue);
-      letter-spacing: -0.5px;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(0,0,0,0.1) 0%, transparent 50%);
     }
 
-    .header-title {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--ink);
-      margin-top: 6px;
-      letter-spacing: -0.3px;
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-logo {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -1px;
     }
 
-    .header-sub {
-      font-size: 14px;
-      color: var(--mid);
-      margin-top: 6px;
+    .hero-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      margin-top: 8px;
     }
 
-    .header-badge {
-      display: inline-block;
-      margin-top: 14px;
-      background: var(--blue-light);
-      color: var(--blue-dark);
+    .hero-pills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .hero-pill {
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
       font-size: 12px;
       font-weight: 600;
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 100px;
-      letter-spacing: 0.3px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* LEGEND */
+    .legend {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--mid);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
 
     /* MAIN */
     .main {
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 36px 20px 60px;
     }
 
-    /* INTRO */
-    .intro {
+    /* INTRO CARD */
+    .intro-card {
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 32px;
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      border-left: 4px solid var(--blue);
     }
 
-    .intro p {
+    .intro-card p {
       font-size: 15px;
       color: var(--mid);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    .intro strong {
-      color: var(--ink);
-    }
+    .intro-card strong { color: var(--ink); }
 
-    /* PHASE BLOCK */
-    .phase {
-      margin-bottom: 32px;
-    }
+    /* PHASE SECTION */
+    .phase-section { margin-bottom: 44px; }
 
-    .phase-header {
+    .phase-banner {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 14px;
+      margin-bottom: 20px;
     }
 
-    .phase-tag {
-      background: var(--blue);
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 100px;
-    }
-
-    .phase-title {
+    .phase-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 18px;
-      font-weight: 600;
-      color: var(--ink);
+      font-weight: 800;
+      color: var(--white);
+      flex-shrink: 0;
     }
 
-    .phase-goal {
+    .p1 .phase-number { background: var(--blue); }
+    .p2 .phase-number { background: var(--orange); }
+    .p3 .phase-number { background: var(--red); }
+
+    .phase-info { flex: 1; }
+
+    .phase-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.3px;
+    }
+
+    .phase-desc {
       font-size: 13px;
       color: var(--mid);
       margin-top: 2px;
     }
 
-    /* TABLE */
-    .table-wrap {
+    .phase-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      letter-spacing: 0.3px;
+    }
+
+    .p1 .phase-badge { background: var(--blue-light); color: var(--blue-dark); }
+    .p2 .phase-badge { background: var(--orange-light); color: #b57800; }
+    .p3 .phase-badge { background: var(--red-light); color: #b02920; }
+
+    /* WEEK CARDS */
+    .weeks { display: flex; flex-direction: column; gap: 12px; }
+
+    .week-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 16px;
       overflow: hidden;
+      transition: box-shadow 0.2s;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
+    .week-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
     }
 
-    thead {
-      background: var(--soft);
-    }
-
-    thead th {
-      padding: 12px 16px;
-      text-align: left;
-      font-weight: 600;
+    .week-header {
+      padding: 12px 18px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
       font-size: 12px;
+      font-weight: 700;
+      color: var(--mid);
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: var(--mid);
-      border-bottom: 1px solid var(--border);
     }
 
-    tbody tr {
-      border-bottom: 1px solid var(--border);
-      transition: background 0.15s;
+    .week-posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      divide-color: var(--border);
     }
 
-    tbody tr:last-child {
-      border-bottom: none;
+    @media (max-width: 560px) {
+      .week-posts { grid-template-columns: 1fr; }
     }
 
-    tbody tr:hover {
-      background: var(--soft);
-    }
-
-    td {
+    .post-cell {
       padding: 14px 16px;
-      vertical-align: top;
-      color: var(--ink);
-      line-height: 1.5;
+      border-right: 1px solid var(--border);
     }
 
-    td:first-child {
-      font-weight: 600;
-      color: var(--blue-dark);
-      white-space: nowrap;
-      width: 120px;
+    .post-cell:last-child { border-right: none; }
+
+    @media (max-width: 560px) {
+      .post-cell { border-right: none; border-bottom: 1px solid var(--border); }
+      .post-cell:last-child { border-bottom: none; }
     }
 
-    .tag {
-      display: inline-block;
+    .post-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 100px;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
-    .tag-helpful { background: #e6f7ec; color: #1a7a3c; }
-    .tag-trust   { background: #fff4e0; color: #a05c00; }
-    .tag-product { background: #f0eaff; color: #5b34c4; }
-    .tag-urgency { background: #fde8e8; color: #c42b2b; }
+    .type-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
-    td .post-label {
-      display: block;
-      font-size: 14px;
-      font-weight: 400;
+    .helpful .type-dot { background: var(--green); }
+    .helpful .post-type { color: var(--green); }
+
+    .trust .type-dot { background: var(--orange); }
+    .trust .post-type { color: #b57800; }
+
+    .product .type-dot { background: var(--purple); }
+    .product .post-type { color: var(--purple); }
+
+    .urgency .type-dot { background: var(--red); }
+    .urgency .post-type { color: var(--red); }
+
+    .post-text {
+      font-size: 13px;
       color: var(--ink);
+      line-height: 1.5;
     }
 
-    /* READY / NEEDED */
-    .two-col {
+    /* STATUS SECTION */
+    .status-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
     }
 
-    @media (max-width: 560px) {
-      .two-col { grid-template-columns: 1fr; }
+    @media (max-width: 540px) {
+      .status-section { grid-template-columns: 1fr; }
     }
 
     .status-card {
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: 20px;
+      padding: 22px;
     }
 
-    .status-card h3 {
+    .status-title {
       font-size: 14px;
       font-weight: 700;
       color: var(--ink);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+    .status-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
       flex-shrink: 0;
     }
 
-    .dot-green { background: #2ecc71; }
-    .dot-orange { background: #f39c12; }
+    .icon-green { background: var(--green-light); }
+    .icon-orange { background: var(--orange-light); }
 
-    .status-card ul {
-      list-style: none;
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+
+    .check-item {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .status-card li {
+      align-items: flex-start;
+      gap: 10px;
       font-size: 13px;
       color: var(--mid);
-      padding-left: 14px;
-      position: relative;
       line-height: 1.5;
     }
 
-    .status-card li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 7px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--border);
+    .check-box {
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
+    .check-box.done { background: var(--green-light); }
+    .check-box.todo { background: var(--orange-light); border: 1.5px solid #f0c060; }
 
     /* FOOTER */
     .footer {
       text-align: center;
-      padding: 24px;
+      padding: 28px 24px;
       font-size: 12px;
       color: var(--mid);
-      border-top: 1px solid var(--border);
       background: var(--white);
+      border-top: 1px solid var(--border);
     }
 
-    .footer strong {
-      color: var(--blue);
-    }
+    .footer a { color: var(--blue); text-decoration: none; font-weight: 600; }
 
-    /* RESPONSIVE TABLE */
-    @media (max-width: 600px) {
-      table, thead, tbody, tr, td, th {
-        display: block;
-      }
-
-      thead { display: none; }
-
-      tbody tr {
-        padding: 14px 16px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      td {
-        padding: 4px 0;
-        width: 100% !important;
-        white-space: normal;
-      }
-
-      td:first-child {
-        font-size: 13px;
-        margin-bottom: 6px;
-      }
-    }
+    /* SVG CHECK */
+    .svg-check { width: 10px; height: 10px; }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="logo">unik</div>
-    <div class="header-title">Content Roadmap — Back to School 2026</div>
-    <div class="header-sub">June 3 to August 12 · 10 weeks · 3 posts per week</div>
-    <div class="header-badge">Organic only — no paid ads yet</div>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">unik</div>
+      <div class="hero-title">Back to School Content Plan — Summer 2026</div>
+      <div class="hero-pills">
+        <span class="hero-pill">10 Weeks</span>
+        <span class="hero-pill">3 Posts Per Week</span>
+        <span class="hero-pill">Organic Only</span>
+        <span class="hero-pill">School Starts Aug 12</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--green)"></span> Helpful
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--orange)"></span> Trust
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--purple)"></span> Product
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--red)"></span> Urgency
+    </div>
   </div>
 
   <div class="main">
 
     <!-- INTRO -->
-    <div class="intro">
-      <p>
-        This is the content plan for <strong>unik</strong> leading up to back to school. The goal is simple: spend June and July earning trust with helpful content, then convert in August when moms are actively shopping. All 6 video ads are already done. This roadmap covers the organic posts that build the audience around them.
-      </p>
+    <div class="intro-card">
+      <p>Spend June and July <strong>earning trust</strong> with helpful content. Then convert in August when moms are actively shopping. All <strong>6 video ads are already done.</strong> This plan covers the organic posts that build the audience around them. CTA on every post goes to <strong>unikusa.com.</strong></p>
     </div>
 
     <!-- PHASE 1 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span class="phase-tag">Phase 1</span>
-            <span class="phase-title">Plant Seeds</span>
-          </div>
-          <div class="phase-goal">June — earn attention before asking for anything</div>
+    <div class="phase-section p1">
+      <div class="phase-banner">
+        <div class="phase-number">1</div>
+        <div class="phase-info">
+          <div class="phase-name">Plant Seeds</div>
+          <div class="phase-desc">June — earn attention before asking for anything</div>
         </div>
+        <span class="phase-badge">4 Weeks</span>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>Helpful</th>
-              <th>Trust</th>
-              <th>Product</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>June 3-7</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">Stain carousel (how to save a school uniform)</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">"20 years. One LA family." brand intro</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Playground skirt video ad</span></td>
-            </tr>
-            <tr>
-              <td>June 10-14</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">How many uniforms does your kid actually need?</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">Real Amazon review quote</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Hallway ad</span></td>
-            </tr>
-            <tr>
-              <td>June 17-21</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">How to keep white polos white all year</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">Behind the scenes — the LA family, the district</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Boy virtual try-on ad</span></td>
-            </tr>
-            <tr>
-              <td>June 24-28</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">LA school dress code explained simply</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">"Why we started" family story</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Girls playground ad</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="weeks">
+
+        <div class="week-card">
+          <div class="week-header">Week 1 — June 3 to 7</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">Stain carousel — how to save a school uniform from anything</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">"20 years. One LA family." brand intro post</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Playground skirt video ad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 2 — June 10 to 14</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">How many uniforms does your kid actually need?</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">Real Amazon review quote (word for word)</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Hallway video ad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 3 — June 17 to 21</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">How to keep white polos white all year long</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">Behind the scenes — LA family, LA schools, 20 years</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Boy virtual try-on ad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 4 — June 24 to 28</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">LA school dress code rules explained simply</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">"Why we started" — the family story</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Girls playground video ad</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- PHASE 2 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span class="phase-tag">Phase 2</span>
-            <span class="phase-title">Build Trust</span>
-          </div>
-          <div class="phase-goal">July — become the brand moms recognize and remember</div>
+    <div class="phase-section p2">
+      <div class="phase-banner">
+        <div class="phase-number">2</div>
+        <div class="phase-info">
+          <div class="phase-name">Build Trust</div>
+          <div class="phase-desc">July — become the brand moms recognize and remember</div>
         </div>
+        <span class="phase-badge">4 Weeks</span>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>Helpful</th>
-              <th>Trust</th>
-              <th>Product</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>July 1-5</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">Back to school costs $628 a kid — how to cut the uniform part</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">Review quote (sensory kids)</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">GU07 skirt locker ad</span></td>
-            </tr>
-            <tr>
-              <td>July 8-12</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">How to size uniforms (measure, buy up one size)</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">"Still fits in November" durability story</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Polo color lineup carousel</span></td>
-            </tr>
-            <tr>
-              <td>July 15-19</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">Uniforms for rough and active kids — what to look for</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">Family photo or real kid content</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Dress ad</span></td>
-            </tr>
-            <tr>
-              <td>July 22-26</td>
-              <td><span class="tag tag-helpful">Helpful</span><span class="post-label">Uniforms for sensory-sensitive kids</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">14,000+ reviews milestone</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Full product range carousel</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="weeks">
+
+        <div class="week-card">
+          <div class="week-header">Week 5 — July 1 to 5</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">Back to school costs $628 a kid — here is how to cut the uniform part</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">Review quote from a sensory-kid parent</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">GU07 skirt locker video ad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 6 — July 8 to 12</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">How to size school uniforms — measure first, buy up one size</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">"Still fits in November" durability story</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Polo color lineup carousel (10 colors)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 7 — July 15 to 19</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">Uniforms for rough and active kids — what to actually look for</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">Family photo or real kid content from you all</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Girl Safari dress ad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 8 — July 22 to 26</div>
+          <div class="week-posts">
+            <div class="post-cell helpful">
+              <div class="post-type"><span class="type-dot"></span>Helpful</div>
+              <div class="post-text">Uniforms for sensory-sensitive kids — what makes the difference</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">14,000+ reviews milestone post</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Full product range carousel</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- PHASE 3 -->
-    <div class="phase">
-      <div class="phase-header">
-        <div>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span class="phase-tag">Phase 3</span>
-            <span class="phase-title">Convert</span>
-          </div>
-          <div class="phase-goal">August — capture moms who are ready to buy</div>
+    <div class="phase-section p3">
+      <div class="phase-banner">
+        <div class="phase-number">3</div>
+        <div class="phase-info">
+          <div class="phase-name">Convert</div>
+          <div class="phase-desc">August — capture moms who are ready to buy right now</div>
         </div>
+        <span class="phase-badge">2 Weeks</span>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>Urgency</th>
-              <th>Social Proof</th>
-              <th>Direct CTA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>July 29 to Aug 4</td>
-              <td><span class="tag tag-urgency">Urgency</span><span class="post-label">"School starts in 2 weeks" countdown</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">Best review of the year</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">"Shop before they sell out" product post</span></td>
-            </tr>
-            <tr>
-              <td>Aug 5-12</td>
-              <td><span class="tag tag-urgency">Urgency</span><span class="post-label">"Last call" back to school post</span></td>
-              <td><span class="tag tag-trust">Trust</span><span class="post-label">Real first day photo (if available)</span></td>
-              <td><span class="tag tag-product">Product</span><span class="post-label">Link in bio push to unikusa.com</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="weeks">
+
+        <div class="week-card">
+          <div class="week-header">Week 9 — July 29 to Aug 4</div>
+          <div class="week-posts">
+            <div class="post-cell urgency">
+              <div class="post-type"><span class="type-dot"></span>Urgency</div>
+              <div class="post-text">"School starts in 2 weeks" countdown post</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">Best review of the whole summer</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">"Shop before they sell out" product post</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week-card">
+          <div class="week-header">Week 10 — Aug 5 to 12 (School Starts)</div>
+          <div class="week-posts">
+            <div class="post-cell urgency">
+              <div class="post-type"><span class="type-dot"></span>Urgency</div>
+              <div class="post-text">"Last call" back to school post</div>
+            </div>
+            <div class="post-cell trust">
+              <div class="post-type"><span class="type-dot"></span>Trust</div>
+              <div class="post-text">Real first day of school photo (from your family if possible)</div>
+            </div>
+            <div class="post-cell product">
+              <div class="post-type"><span class="type-dot"></span>Product</div>
+              <div class="post-text">Link in bio push direct to unikusa.com</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- READY / NEEDED -->
-    <div class="two-col">
+    <!-- STATUS -->
+    <div class="status-section">
       <div class="status-card">
-        <h3><span class="dot dot-green"></span>Ready to post now</h3>
-        <ul>
-          <li>6 finished video ads</li>
-          <li>Stain carousel (just made)</li>
-          <li>10 real Amazon review quotes</li>
-          <li>Sourced helpful content bank (stains, sizing, budgeting, sensory, LA dress code)</li>
-          <li>Full product catalog with real prices</li>
+        <div class="status-title">
+          <div class="status-icon icon-green">
+            <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M3 8.5L6.5 12L13 5" stroke="#27ae60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          Ready to post now
+        </div>
+        <ul class="check-list">
+          <li class="check-item">
+            <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            6 finished video ads
+          </li>
+          <li class="check-item">
+            <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Stain tips carousel
+          </li>
+          <li class="check-item">
+            <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            10 real Amazon review quotes
+          </li>
+          <li class="check-item">
+            <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Sourced helpful content (stains, sizing, budgeting, sensory, dress code)
+          </li>
+          <li class="check-item">
+            <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Full product catalog with real prices
+          </li>
         </ul>
       </div>
+
       <div class="status-card">
-        <h3><span class="dot dot-orange"></span>Still needs to be made</h3>
-        <ul>
-          <li>Brand intro post ("20 years, one LA family")</li>
-          <li>Sizing guide carousel</li>
-          <li>Polo color lineup carousel</li>
-          <li>Full product range carousel</li>
-          <li>First day real photo (from you all)</li>
-          <li>Clean voice over on locker ad (optional)</li>
+        <div class="status-title">
+          <div class="status-icon icon-orange">
+            <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M8 3V8.5M8 11.5V12" stroke="#f39c12" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          Still needs to be made
+        </div>
+        <ul class="check-list">
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            Brand intro post ("20 years, one LA family")
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            Sizing guide carousel
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            Polo color lineup carousel
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            Full product range carousel
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            First day real photo (from your family)
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            Clean voice over on locker ad (optional upgrade)
+          </li>
         </ul>
       </div>
     </div>
@@ -502,7 +696,7 @@
 
   <!-- FOOTER -->
   <div class="footer">
-    Built for <strong>unik</strong> by Zentara &nbsp;·&nbsp; unikusa.com &nbsp;·&nbsp; June 2026
+    Built for <strong style="color:var(--blue)">unik</strong> by Zentara &nbsp;·&nbsp; <a href="https://unikusa.com" target="_blank">unikusa.com</a> &nbsp;·&nbsp; June 2026
   </div>
 
 </body>
