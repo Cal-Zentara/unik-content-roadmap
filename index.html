@@ -85,6 +85,36 @@
       border: 1px solid rgba(255,255,255,0.3);
     }
 
+    /* PHOTO STRIP */
+    .photo-strip {
+      display: flex;
+      gap: 0;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .photo-item {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .photo-strip { height: 140px; }
+    }
+
     /* LEGEND */
     .legend {
       background: var(--white);
@@ -373,6 +403,15 @@
         <span class="hero-pill">School Starts Aug 12</span>
       </div>
     </div>
+  </div>
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="photo-item"><img src="img-poster.png" alt="unik poster" /></div>
+    <div class="photo-item"><img src="img-kids.jpeg" alt="kids in uniforms" /></div>
+    <div class="photo-item"><img src="img-flatlay.jpeg" alt="uniform flat lay" /></div>
+    <div class="photo-item"><img src="img-girl.jpeg" alt="girl in uniform" /></div>
+    <div class="photo-item"><img src="img-boy.jpeg" alt="boy in uniform" /></div>
   </div>
 
   <!-- LEGEND -->
