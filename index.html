@@ -20,6 +20,8 @@
       --purple-light: #f3eaff;
       --red: #e74c3c;
       --red-light: #fdecea;
+      --pink: #db2777;
+      --pink-light: #fce7f3;
       --ink: #1a1a2e;
       --mid: #6b7280;
       --bg: #f8f9fb;
@@ -298,7 +300,7 @@
     .lines-list li { counter-increment: line; font-size: 15px; font-weight: 500; color: #fff; line-height: 1.5; padding-left: 32px; position: relative; }
     .lines-list li::before { content: counter(line); position: absolute; left: 0; top: 1px; width: 21px; height: 21px; background: var(--blue); color: #fff; border-radius: 6px; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 
-    /* GROW AUDIENCE */
+    /* GROW AUDIENCE + ENGINE */
     .grow-section { margin-bottom: 44px; }
     .grow-rank { display: flex; flex-direction: column; gap: 14px; margin-bottom: 18px; }
     .grow-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; }
@@ -394,8 +396,9 @@
 
     .week-posts {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      divide-color: var(--border);
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 10px;
+      padding: 14px;
     }
 
     @media (max-width: 560px) {
@@ -403,15 +406,10 @@
     }
 
     .post-cell {
-      padding: 14px 16px;
-      border-right: 1px solid var(--border);
-    }
-
-    .post-cell:last-child { border-right: none; }
-
-    @media (max-width: 560px) {
-      .post-cell { border-right: none; border-bottom: 1px solid var(--border); }
-      .post-cell:last-child { border-bottom: none; }
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
     }
 
     .post-type {
@@ -432,6 +430,9 @@
       flex-shrink: 0;
     }
 
+    .hook .type-dot { background: var(--blue); }
+    .hook .post-type { color: var(--blue-dark); }
+
     .helpful .type-dot { background: var(--green); }
     .helpful .post-type { color: var(--green); }
 
@@ -440,6 +441,9 @@
 
     .product .type-dot { background: var(--purple); }
     .product .post-type { color: var(--purple); }
+
+    .spanish .type-dot { background: var(--pink); }
+    .spanish .post-type { color: var(--pink); }
 
     .urgency .type-dot { background: var(--red); }
     .urgency .post-type { color: var(--red); }
@@ -456,7 +460,7 @@
       font-size: 10px;
       font-weight: 600;
       color: var(--mid);
-      background: var(--soft);
+      background: var(--white);
       border: 1px solid var(--border);
       padding: 2px 8px;
       border-radius: 100px;
@@ -559,7 +563,8 @@
       <div class="hero-title">Back to School Content Plan — Summer 2026</div>
       <div class="hero-pills">
         <span class="hero-pill">10 Weeks</span>
-        <span class="hero-pill">3 Posts Per Week</span>
+        <span class="hero-pill">5 Posts Per Week</span>
+        <span class="hero-pill">1 Spanish Post Weekly</span>
         <span class="hero-pill">Organic Only</span>
         <span class="hero-pill">School Starts Aug 12</span>
       </div>
@@ -588,6 +593,9 @@
   <!-- LEGEND -->
   <div class="legend">
     <div class="legend-item">
+      <span class="legend-dot" style="background:var(--blue)"></span> Hook
+    </div>
+    <div class="legend-item">
       <span class="legend-dot" style="background:var(--green)"></span> Helpful
     </div>
     <div class="legend-item">
@@ -595,6 +603,9 @@
     </div>
     <div class="legend-item">
       <span class="legend-dot" style="background:var(--purple)"></span> Product
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--pink)"></span> Spanish
     </div>
     <div class="legend-item">
       <span class="legend-dot" style="background:var(--red)"></span> Urgency
@@ -605,7 +616,7 @@
 
     <!-- INTRO -->
     <div class="intro-card">
-      <p>Spend June and July <strong>earning trust</strong> with helpful content. Then convert in August when moms are actively shopping. All <strong>6 video ads are already done.</strong> This plan covers the organic posts that build the audience around them. CTA on every post goes to <strong>unikusa.com.</strong></p>
+      <p>Spend June and July <strong>earning trust</strong> with helpful posts and scroll stopping hooks. Then convert in August when moms are actively shopping. Now running <strong>5 posts a week</strong>, with <strong>one Spanish post every week</strong> to reach LA Latina moms, the lane nobody else is filling. All <strong>6 video ads are already done.</strong> CTA on every post goes to <strong>unikusa.com.</strong></p>
     </div>
 
     <!-- STRATEGY -->
@@ -637,7 +648,7 @@
 
     <!-- COMPETITOR INTEL -->
     <div class="intel-banner">
-      <div class="intel-tag">New — Competitor Research, June 2026</div>
+      <div class="intel-tag">Competitor Research, June 2026</div>
       <div class="intel-h2">What the big brands do, and where unik wins</div>
       <p class="intel-sub">We read every active ad from The Children's Place and Cookie's Kids in the Facebook Ad Library. Here is the pattern behind their winners, and the lane no one is filling.</p>
     </div>
@@ -658,7 +669,7 @@
           <li>Lead with durability and family. Price is the quiet surprise</li>
           <li>Real kids, warm documentary photos, a story in every post</li>
           <li>Own the durability they proved works, then go further: made to last AND handed down</li>
-          <li>Nobody tells a 20 year family story or shows a real mom. That lane is ours</li>
+          <li>Nobody tells a 20 year family story, shows a real mom, or speaks Spanish. That lane is ours</li>
         </ul>
       </div>
     </div>
@@ -674,12 +685,45 @@
       </ol>
     </div>
 
+    <!-- HOOK ENGINE -->
+    <div class="grow-section">
+      <div class="intel-banner">
+        <div class="intel-tag">New — What's Working, June 2026</div>
+        <div class="intel-h2">The hook engine: steal the feeling, not the ad</div>
+        <p class="intel-sub">Pulled live from TikTok and the ad libraries. Two moves do the heavy lifting in every Hook post: an opening that names a real feeling, and a close that gets moms commenting.</p>
+      </div>
+
+      <div class="grow-rank">
+
+        <div class="grow-card first">
+          <div class="grow-badge">★</div>
+          <div class="grow-body">
+            <div class="grow-h">The Letdown Flip (our signature hook)</div>
+            <div class="grow-p">Open on the groan every uniform mom knows ("back to school haul but it's a uniform 😩"), then flip it to a win: a uniform can be the fun one. A real version of this hit 142,000 likes. We steal the feeling, never the exact words.</div>
+            <span class="grow-src">Source: TikTok, pulled live June 3 2026 (142.1K likes)</span>
+          </div>
+        </div>
+
+        <div class="grow-card">
+          <div class="grow-badge">💬</div>
+          <div class="grow-body">
+            <div class="grow-h">The color comment-bait (our signature close)</div>
+            <div class="grow-p">End posts by asking moms their school's uniform color ("drop your school color below 👇 we probably carry it"). People can't resist answering, which feeds the algorithm and quietly proves we stock all 10 colors. A real comment doing this pulled 88 likes on its own.</div>
+            <span class="grow-src">Source: TikTok comments, pulled live June 3 2026</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grow-note"><strong>Use them together:</strong> open with the Letdown Flip, close with the color question. That is the spine of every Hook post in the calendar below.</div>
+    </div>
+
     <!-- GROW AUDIENCE -->
     <div class="grow-section">
       <div class="intel-banner">
-        <div class="intel-tag">New — Audience Research, June 2026</div>
+        <div class="intel-tag">Audience Research, June 2026</div>
         <div class="intel-h2">How to grow the audience fastest</div>
-        <p class="intel-sub">The plan above fills the page with content. This is how you get moms to actually see it. Ranked fastest first, pulled from 2024 to 2026 marketing data. The big idea: borrow audiences that already exist instead of building from zero.</p>
+        <p class="intel-sub">The calendar fills the page with content. This is how you get moms to actually see it. Ranked fastest first, pulled from 2024 to 2026 marketing data. The big idea: borrow audiences that already exist instead of building from zero.</p>
       </div>
 
       <div class="grow-rank">
@@ -714,9 +758,9 @@
         <div class="grow-card">
           <div class="grow-badge">4</div>
           <div class="grow-body">
-            <div class="grow-h">Post short video 3 to 5 times a week, hook hard in 3 seconds</div>
-            <div class="grow-p">Watch time is now the number one thing the algorithm rewards. You need about 70% of people to finish the video, so the first 3 seconds decide everything. Steady 3 to 5 posts a week beats daily bursts followed by silence.</div>
-            <span class="grow-src">Source: Buffer 2026 · Opus 2025</span>
+            <div class="grow-h">Post short video 5 times a week, hook hard in 3 seconds</div>
+            <div class="grow-p">Watch time is now the number one thing the algorithm rewards. You need about 70% of people to finish the video, so the first 3 seconds decide everything. A steady 5 posts a week is the sweet spot, it beats daily bursts followed by silence.</div>
+            <span class="grow-src">Source: Buffer 2026 · Opus 2025 · Metricool 2025</span>
           </div>
         </div>
 
@@ -740,9 +784,14 @@
         <div class="week-card">
           <div class="week-header">Week 1 — June 3 to 7</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"Back to school haul but it's a uniform 😩... okay wait, why is this actually cute?"</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
-              <div class="post-text">Stain carousel — how to save a school uniform from anything</div>
+              <div class="post-text">Stain carousel: how to save a school uniform from anything</div>
               <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
@@ -755,12 +804,22 @@
               <div class="post-text">Girl Safari dress video ad</div>
               <span class="post-format">Video (Reel)</span>
             </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"De una familia de LA, 20 años vistiendo a tus niños para la escuela." Brand intro</div>
+              <span class="post-format">Single Image</span>
+            </div>
           </div>
         </div>
 
         <div class="week-card">
           <div class="week-header">Week 2 — June 10 to 14</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"She thought uniforms were boring. Watch her face now." End: drop your school color 👇</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">How many uniforms does your kid actually need?</div>
@@ -776,12 +835,22 @@
               <div class="post-text">Hallway video ad</div>
               <span class="post-format">Video (Reel)</span>
             </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"¿Cuántos uniformes necesita tu niño en realidad?" The count</div>
+              <span class="post-format">Carousel</span>
+            </div>
           </div>
         </div>
 
         <div class="week-card">
           <div class="week-header">Week 3 — June 17 to 21</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"Everyone's kid got a fashion haul. Mine got a uniform. Here's why mine wins."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">How to keep white polos white all year long</div>
@@ -789,7 +858,7 @@
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
-              <div class="post-text">Behind the scenes — LA family, LA schools, 20 years</div>
+              <div class="post-text">Behind the scenes: LA family, LA schools, 20 years</div>
               <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
@@ -797,12 +866,22 @@
               <div class="post-text">Boy virtual try-on ad</div>
               <span class="post-format">Video (Reel)</span>
             </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"Cómo mantener los polos blancos de verdad blancos" White polo tip</div>
+              <span class="post-format">Carousel</span>
+            </div>
           </div>
         </div>
 
         <div class="week-card">
           <div class="week-header">Week 4 — June 24 to 28</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"Uniform 😩... or the easiest school mornings of your life. Same outfits, zero fights."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
               <div class="post-text">The one thing quietly ruining your white polos (most moms don't know)</div>
@@ -810,13 +889,18 @@
             </div>
             <div class="post-cell trust">
               <div class="post-type"><span class="type-dot"></span>Trust</div>
-              <div class="post-text">"Why we started" — the family story</div>
+              <div class="post-text">"Why we started" the family story</div>
               <span class="post-format">Single Image</span>
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Girls playground video ad</div>
               <span class="post-format">Video (Reel)</span>
+            </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"¿De qué color es el uniforme de tu escuela? 👇 seguro lo tenemos" Color comment bait</div>
+              <span class="post-format">Single Image</span>
             </div>
           </div>
         </div>
@@ -839,9 +923,14 @@
         <div class="week-card">
           <div class="week-header">Week 5 — July 1 to 5</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"Everyone thinks a uniform haul is sad. Here's how I got my daughter excited for hers."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
-              <div class="post-text">Back to school costs $628 a kid — here is how to cut the uniform part</div>
+              <div class="post-text">Back to school costs $628 a kid. Here is how to cut the uniform part</div>
               <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
@@ -854,15 +943,25 @@
               <div class="post-text">GU07 skirt locker video ad</div>
               <span class="post-format">Video (Reel)</span>
             </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"El regreso a clases no tiene que costar tanto" Budget tips</div>
+              <span class="post-format">Carousel</span>
+            </div>
           </div>
         </div>
 
         <div class="week-card">
           <div class="week-header">Week 6 — July 8 to 12</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"I dreaded the uniform aisle. Turns out it saved my mornings and my wallet."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
-              <div class="post-text">How to size school uniforms — measure first, buy up one size</div>
+              <div class="post-text">How to size school uniforms. Measure first, then buy</div>
               <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
@@ -872,7 +971,12 @@
             </div>
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
-              <div class="post-text">Polo color lineup carousel (10 colors)</div>
+              <div class="post-text">Polo color lineup carousel (10 colors). Pair with color comment bait CTA</div>
+              <span class="post-format">Carousel</span>
+            </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"Guía de tallas: mide antes de comprar" Sizing guide</div>
               <span class="post-format">Carousel</span>
             </div>
           </div>
@@ -881,9 +985,14 @@
         <div class="week-card">
           <div class="week-header">Week 7 — July 15 to 19</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"Kids think a uniform means no style. My son would like a word."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
-              <div class="post-text">Uniforms for rough and active kids — what to actually look for</div>
+              <div class="post-text">Uniforms for rough and active kids. What to actually look for</div>
               <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
@@ -896,15 +1005,25 @@
               <div class="post-text">Girl Safari dress ad</div>
               <span class="post-format">Video (Reel)</span>
             </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"¿Qué color te toca este año? Dime abajo 👇" Color comment bait</div>
+              <span class="post-format">Single Image</span>
+            </div>
           </div>
         </div>
 
         <div class="week-card">
           <div class="week-header">Week 8 — July 22 to 26</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"My kid was bummed she had to wear a uniform. Not anymore."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell helpful">
               <div class="post-type"><span class="type-dot"></span>Helpful</div>
-              <div class="post-text">Uniforms for sensory-sensitive kids — what makes the difference</div>
+              <div class="post-text">Uniforms for sensory-sensitive kids. What makes the difference</div>
               <span class="post-format">Carousel</span>
             </div>
             <div class="post-cell trust">
@@ -915,6 +1034,11 @@
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Full product range carousel</div>
+              <span class="post-format">Carousel</span>
+            </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"Uniformes cómodos para niños sensibles" Comfort, the pain point real moms raised</div>
               <span class="post-format">Carousel</span>
             </div>
           </div>
@@ -938,6 +1062,11 @@
         <div class="week-card">
           <div class="week-header">Week 9 — July 29 to Aug 4</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"School starts in 2 weeks and you haven't bought a single uniform. Same? Start here."</div>
+              <span class="post-format">Video (Reel)</span>
+            </div>
             <div class="post-cell urgency">
               <div class="post-type"><span class="type-dot"></span>Urgency</div>
               <div class="post-text">"School starts in 2 weeks" countdown post</div>
@@ -953,12 +1082,22 @@
               <div class="post-text">"Shop before they sell out" product post + link in bio</div>
               <span class="post-format">Single Image + Paid Boost</span>
             </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"Faltan 2 semanas para clases. La parte de uniformes, resuelta." Urgency</div>
+              <span class="post-format">Single Image</span>
+            </div>
           </div>
         </div>
 
         <div class="week-card">
           <div class="week-header">Week 10 — Aug 5 to 12 (School Starts)</div>
           <div class="week-posts">
+            <div class="post-cell hook">
+              <div class="post-type"><span class="type-dot"></span>Hook</div>
+              <div class="post-text">"First day fits, sorted. The easiest uniform haul you'll do all year."</div>
+              <span class="post-format">Video (Reel) + Paid Boost</span>
+            </div>
             <div class="post-cell urgency">
               <div class="post-type"><span class="type-dot"></span>Urgency</div>
               <div class="post-text">"Last call" back to school post</div>
@@ -972,6 +1111,11 @@
             <div class="post-cell product">
               <div class="post-type"><span class="type-dot"></span>Product</div>
               <div class="post-text">Link in bio push direct to unikusa.com</div>
+              <span class="post-format">Single Image + Paid Boost</span>
+            </div>
+            <div class="post-cell spanish">
+              <div class="post-type"><span class="type-dot"></span>Spanish</div>
+              <div class="post-text">"Primer día listo 🎒 todo en unikusa.com" Convert</div>
               <span class="post-format">Single Image + Paid Boost</span>
             </div>
           </div>
@@ -1008,6 +1152,10 @@
           </li>
           <li class="check-item">
             <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Proven hook formula (Letdown Flip + color comment-bait)
+          </li>
+          <li class="check-item">
+            <div class="check-box done"><svg class="svg-check" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="#27ae60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             Full product catalog with real prices
           </li>
         </ul>
@@ -1023,6 +1171,14 @@
         <ul class="check-list">
           <li class="check-item">
             <div class="check-box todo"></div>
+            Letdown Flip hook reels (one per week)
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
+            Spanish versions of each post (one per week)
+          </li>
+          <li class="check-item">
+            <div class="check-box todo"></div>
             Brand intro post ("20 years, one LA family")
           </li>
           <li class="check-item">
@@ -1035,15 +1191,7 @@
           </li>
           <li class="check-item">
             <div class="check-box todo"></div>
-            Full product range carousel
-          </li>
-          <li class="check-item">
-            <div class="check-box todo"></div>
             First day real photo (from your family)
-          </li>
-          <li class="check-item">
-            <div class="check-box todo"></div>
-            Clean voice over on locker ad (optional upgrade)
           </li>
         </ul>
       </div>
