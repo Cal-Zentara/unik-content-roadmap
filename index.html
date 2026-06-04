@@ -267,6 +267,37 @@
       .strategy-arrow { transform: rotate(90deg); align-self: center; padding: 4px 0; }
     }
 
+    /* COMPETITOR INTEL */
+    .intel-banner { margin-bottom: 22px; }
+    .intel-tag {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase; color: var(--blue-dark);
+      background: var(--blue-light); padding: 5px 12px; border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .intel-h2 { font-size: 22px; font-weight: 800; color: var(--ink); letter-spacing: -0.4px; }
+    .intel-sub { font-size: 14px; color: var(--mid); line-height: 1.7; margin-top: 8px; }
+
+    .compare-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 22px; }
+    @media (max-width: 600px) { .compare-row { grid-template-columns: 1fr; } }
+    .compare-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; }
+    .compare-card.us { border-left: 4px solid var(--blue); }
+    .compare-card.them { border-left: 4px solid var(--border); }
+    .compare-head { font-size: 13px; font-weight: 800; letter-spacing: 0.3px; margin-bottom: 12px; }
+    .them-head { color: var(--mid); }
+    .us-head { color: var(--blue-dark); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .compare-list li { font-size: 13px; color: var(--mid); line-height: 1.55; padding-left: 20px; position: relative; }
+    .compare-card.them .compare-list li::before { content: '✕'; position: absolute; left: 0; color: #c0c4cc; font-weight: 700; }
+    .compare-card.us .compare-list li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+
+    .lines-card { background: var(--ink); border-radius: 18px; padding: 24px 26px; margin-bottom: 44px; }
+    .lines-title { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+    .lines-list { list-style: none; counter-reset: line; display: flex; flex-direction: column; gap: 13px; }
+    .lines-list li { counter-increment: line; font-size: 15px; font-weight: 500; color: #fff; line-height: 1.5; padding-left: 32px; position: relative; }
+    .lines-list li::before { content: counter(line); position: absolute; left: 0; top: 1px; width: 21px; height: 21px; background: var(--blue); color: #fff; border-radius: 6px; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+
     /* PHASE SECTION */
     .phase-section { margin-bottom: 44px; }
 
@@ -588,6 +619,45 @@
           <div class="strategy-desc">August only. Take the post that performed best and put $5 to $10 a day behind it on Instagram. Audience is warm, school starts in days. That is when ads convert.</div>
         </div>
       </div>
+    </div>
+
+    <!-- COMPETITOR INTEL -->
+    <div class="intel-banner">
+      <div class="intel-tag">New — Competitor Research, June 2026</div>
+      <div class="intel-h2">What the big brands do, and where unik wins</div>
+      <p class="intel-sub">We read every active ad from The Children's Place and Cookie's Kids in the Facebook Ad Library. Here is the pattern behind their winners, and the lane no one is filling.</p>
+    </div>
+
+    <div class="compare-row">
+      <div class="compare-card them">
+        <div class="compare-head them-head">What they do</div>
+        <ul class="compare-list">
+          <li>Sell on price and panic ("60% off", "your cart's about to expire")</li>
+          <li>Flat product photos on white. No people, no story</li>
+          <li>The smartest one wins on durability: their top ad is "playground proof"</li>
+          <li>Reuse about 5 lines across every product</li>
+        </ul>
+      </div>
+      <div class="compare-card us">
+        <div class="compare-head us-head">What unik does</div>
+        <ul class="compare-list">
+          <li>Lead with durability and family. Price is the quiet surprise</li>
+          <li>Real kids, warm documentary photos, a story in every post</li>
+          <li>Own the durability they proved works, then go further: made to last AND handed down</li>
+          <li>Nobody tells a 20 year family story or shows a real mom. That lane is ours</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lines-card">
+      <div class="lines-title">Our 5 core lines — reuse across every product</div>
+      <ol class="lines-list">
+        <li>Built to survive recess, the bus, and the little brother who gets it next.</li>
+        <li>One LA family has dressed kids for school for 20 years. Now it is your kid's turn.</li>
+        <li>Made to last the whole school year. Under $15. We did the math too.</li>
+        <li>Kids grow fast. Their uniforms should not give out first.</li>
+        <li>Premium quality from a family that has been doing this since before your kid was born.</li>
+      </ol>
     </div>
 
     <!-- PHASE 1 -->
